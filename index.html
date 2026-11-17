@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Student Marks Management System</h1>
+        <p class="subtitle">Enter student details and subject marks</p>
+
+        <div class="form-section">
+
+            <label>Student Name</label>
+            <input type="text" id="studentName"
+                   placeholder="Enter student name">
+
+            <label>Roll Number</label>
+            <input type="text" id="rollNumber"
+                   placeholder="Enter roll number">
+
+            <h3>Subject Marks (Out of 100)</h3>
+
+            <label>Subject 1</label>
+            <input type="number" id="subject1"
+                   placeholder="Enter marks or leave empty if absent">
+
+            <label>Subject 2</label>
+            <input type="number" id="subject2"
+                   placeholder="Enter marks or leave empty if absent">
+
+            <label>Subject 3</label>
+            <input type="number" id="subject3"
+                   placeholder="Enter marks or leave empty if absent">
+
+            <label>Subject 4</label>
+            <input type="number" id="subject4"
+                   placeholder="Enter marks or leave empty if absent">
+
+            <label>Subject 5</label>
+            <input type="number" id="subject5"
+                   placeholder="Enter marks or leave empty if absent">
+
+            <label>Subject 6</label>
+            <input type="number" id="subject6"
+                   placeholder="Enter marks or leave empty if absent">
+
+            <button onclick="calculateResult()">
+                Calculate Result
+            </button>
+
+            <p id="errorMessage"></p>
+
+        </div>
+
+        <div id="marksheet" class="marksheet hidden">
+            <h2>STUDENT MARKSHEET</h2>
+            <p class="certificate-title">
+                Academic Performance Report
+            </p>
+
+            <div id="studentDetails"></div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Maximum Marks</th>
+                        <th>Obtained Marks</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="marksTable"></tbody>
+            </table>
+
+            <div id="summary"></div>
+
+            <p class="certificate-footer">
+                This is a computer-generated marksheet.
+            </p>
+
+            <button onclick="downloadMarksheet()" id="downloadButton">
+                Download Marksheet (PDF)
+            </button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

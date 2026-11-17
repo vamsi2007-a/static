@@ -1,0 +1,187 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eaf0f8;
+    margin: 0;
+    padding: 25px;
+    color: #222;
+}
+
+.container {
+    max-width: 750px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+
+h1 {
+    text-align: center;
+    color: #234b85;
+    font-size: 27px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: #234b85;
+    margin-top: 25px;
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 7px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #234b85;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 20px;
+    background: #234b85;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #16345f;
+}
+
+#errorMessage {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Marksheet design */
+
+.marksheet {
+    margin-top: 35px;
+    padding: 25px;
+    border: 2px solid #234b85;
+    border-radius: 8px;
+}
+
+.marksheet h2 {
+    text-align: center;
+    color: #234b85;
+}
+
+.certificate-title {
+    text-align: center;
+    color: #666;
+}
+
+#studentDetails {
+    margin: 25px 0;
+    line-height: 2;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #999;
+    padding: 11px;
+    text-align: center;
+}
+
+th {
+    background: #234b85;
+    color: white;
+}
+
+#summary {
+    margin-top: 25px;
+    padding: 15px;
+    background: #eef3fa;
+    line-height: 2;
+    border-radius: 6px;
+}
+
+.certificate-footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #666;
+}
+
+/* PDF / Print settings */
+
+@media print {
+
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .container {
+        box-shadow: none;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    h1, .subtitle, .form-section,
+    #downloadButton {
+        display: none !important;
+    }
+
+    .marksheet {
+        display: block !important;
+        border: 2px solid #234b85;
+        margin: 0;
+        padding: 25px;
+    }
+
+    th {
+        background: #234b85 !important;
+        color: white !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    #summary {
+        background: #eef3fa !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    @page {
+        size: A4;
+        margin: 15mm;
+    }
+}
